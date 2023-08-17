@@ -1,0 +1,56 @@
+p.verso {
+
+    color: blue;
+
+}
+
+p.mote {
+    color: red;
+}
+
+.link {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Estilo quando o mouse está sobre o link */
+.link:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Estilo após o link ser visitado */
+.link:visited {
+    color: purple;
+}
+
+
+.avatar {
+    width: 50px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+    height: 50px;
+    border-radius: 50%;
+    /* Isso torna a imagem arredondada */
+    margin-right: 10px;
+    /* Espaçamento entre a imagem e o texto */
+    object-fit: cover;
+    /* Ajusta a imagem para caber no espaço definido */
+}
+
+.poeta img {
+    border-radius: 15%; /* Isso torna as bordas da imagem arredondadas */
+    padding: 5px; /* Adiciona um espaçamento interno para preservar a forma da imagem */
+    border: 2px solid #ccc; /* Adiciona uma borda para destacar a imagem */
+  }
+  /* Estilo para cabeçalhos de tabela */
+th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Estilo para links de tabela */
+  td a {
+    text-decoration: none;
+    color: #007bff;
+  }
