@@ -1,4 +1,5 @@
 
 #meuAmor {
-    transition: opacity 0.05s;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Duração e easing do efeito de fade */
 }
