@@ -1,0 +1,46 @@
+<!-- Altere o comportamento do botão. Inicialmente, o clique exibe o nome Guiness num div diferente que está inicialmente vazio.
+Um clique subsequente apaga o div onde o nome Guiness está escrito.  -->
+
+<!DOCTYPE html>
+
+<html>   
+
+   <head>
+
+      <meta charset="UTF-8">      
+
+   </head>
+
+   
+
+   <body>
+
+      <div id="meu amor">
+
+      </div>            
+      <div>
+        <button id="botaoCarregar">Carregando cervejas...</button>
+      </div>
+
+   </body>   
+
+   
+   <script>
+    let div = document.getElementById("meu amor");
+    let botao = document.getElementById("botaoCarregar");
+    let exibirNome = true; // Variável para controlar o estado de exibição
+
+    function alternarExibicao() {
+      if (exibirNome) {
+        div.innerHTML = `<h1>Guinness</h1>`;
+      } else {
+        div.innerHTML = ''; // Remove o conteúdo da div
+      }
+
+      exibirNome = !exibirNome; // Inverte o estado de exibição
+    }
+
+    botao.addEventListener("click", alternarExibicao);
+  </script>
+
+</html>
