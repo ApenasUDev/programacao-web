@@ -67,15 +67,21 @@
     let cervejas = [
         {
             name: "Guinness",
-            alcohol: "10%"
+            alcohol: "10%",
+            style: "Stout",
+            ibu: "40"
         },
         {
             name: "Desperados",
-            alcohol: "6%"
+            alcohol: "6%",
+            style: "Lager",
+            ibu: "25"
         },
         {
             name: "Becks",
-            alcohol: "5%"
+            alcohol: "5%",
+            style: "Pilsen",
+            ibu: "30"
         }
     ];
 
@@ -87,6 +93,8 @@
                     <tr>
                         <th>Nome</th>
                         <th>Álcool</th>
+                        <th>Estilo</th>
+                        <th>IBU</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -102,6 +110,8 @@
             <tr>
                 <td>${item['name']}</td>
                 <td>${item['alcohol']}</td>
+                <td>${item['style']}</td>
+                <td>${item['ibu']}</td>
             </tr>`
         ).join('');
     }
