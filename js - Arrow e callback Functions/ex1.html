@@ -1,0 +1,47 @@
+<!-- Faça mais uma refatoração. Modifique a função carregarDiv 
+     do modo que ela receba um parâmetro, 
+     identificado por cervs. Esse parâmetro é um vetor e
+     a chamada ao método map, dentro da função carregarDiv, deve 
+     ser feita sobre o parâmetro cervs e não sobre a variável (global) cervejas.
+     Faça as alterações necessárias para que o array cervejas seja passado como parâmetro
+     para o carregarDiv e a página contunue com o mesmo comportamento. -->
+
+     <!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+    <div><button id="botaoCarregar">Carregando cervejas...</button></div>
+
+    <div id="meu amor"></div>
+
+</body>
+
+<script>
+
+    let cervejas = ["Guiness", "Desperados", "Becks"]
+
+    //   function carregarDiv(){
+    const carregarDiv = () => {
+        const div = document.getElementById("meu amor")
+
+        const cervejasHtml = cervejas.map(item => `<h1>${item}</h1>`)
+
+        div.innerHTML = `${cervejasHtml.join("\n")}`
+
+    }
+
+    let botao = document.getElementById("botaoCarregar")
+
+    botao.addEventListener("click", carregarDiv)
+
+</script>
+
+</html>
