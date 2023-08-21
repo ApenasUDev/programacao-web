@@ -1,0 +1,66 @@
+<!-- Você deve fazer todos os exercícios da receita anterior, modificando o array de
+     cervejas para algum domínio que você acha mais interessante - roupa, sorvete, cachaça, o que você quiser. 
+    Todas as funções que você escrever devem ser arrow functions. Todas. -->
+
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    
+    <body>
+        <div><button id="botaoCarregar">Carregando cachaças...</button></div>
+        <div id="meuAmor"></div>
+    
+        <script>
+            const transformarEmTableRow = item => `<tr><td>${item}</td></tr>`;
+            let cachaças = ["GERMANA", "WEBER HAUS 7 MADEIRAS", "FAMOSINHA"];
+    
+            function carregarTabela(cachaçasArray) {
+                const div = document.getElementById("meuAmor");
+                const tabelaHTML = `
+                   <table>
+                      <thead>
+                         <tr>
+                            <th>Cachaças</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         ${cachaçasArray.map(transformarEmTableRow).join("")}
+                      </tbody>
+                   </table>
+                `;
+                div.innerHTML = tabelaHTML;
+            }
+    
+            const carregarDiv = cachaçasArray => {
+                const div = document.getElementById("meuAmor");
+                const cachaçasHtml = cachaçasArray.map(item => `<div style="color:white;background-color:black;font-size:25px">${item}</div>`);
+                div.innerHTML = `${cachaçasHtml.join("\n")}`;
+            }
+    
+            const botaoCarregar = document.getElementById("botaoCarregar");
+            botaoCarregar.addEventListener("click", () => carregarTabela(cachaças));
+    
+            const botaoOrdenar = document.createElement("button");
+            botaoOrdenar.textContent = "Mostrar cachaças ordenadas";
+            botaoOrdenar.addEventListener("click", () => {
+                cachaças.sort();
+                carregarTabela(cachaças);
+            });
+    
+            const botaoEmbaralhar = document.createElement("button");
+            botaoEmbaralhar.textContent = "Embaralhar cachaças";
+            botaoEmbaralhar.addEventListener("click", () => {
+                cachaças = cachaças.sort(() => Math.random() - 0.5);
+                carregarTabela(cachaças);
+            });
+    
+            document.body.appendChild(botaoOrdenar);
+            document.body.appendChild(botaoEmbaralhar);
+        </script>
+    </body>
+    
+    </html>
+    

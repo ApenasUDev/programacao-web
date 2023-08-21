@@ -6,42 +6,30 @@
      Faça as alterações necessárias para que o array cervejas seja passado como parâmetro
      para o carregarDiv e a página contunue com o mesmo comportamento. -->
 
-     <!DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
 
 <head>
-
     <meta charset="UTF-8">
-
 </head>
 
 <body>
-
     <div><button id="botaoCarregar">Carregando cervejas...</button></div>
+    <div id="meuAmor"></div>
 
-    <div id="meu amor"></div>
+    <script>
+        let cervejas = ["Guiness", "Desperados", "Becks"];
 
+        const carregarDiv = (cervs) => {
+            const div = document.getElementById("meuAmor");
+
+            const cervejasHtml = cervs.map(item => `<h1>${item}</h1>`);
+            div.innerHTML = `${cervejasHtml.join("\n")}`;
+        }
+
+        let botao = document.getElementById("botaoCarregar");
+        botao.addEventListener("click", () => carregarDiv(cervejas));
+    </script>
 </body>
-
-<script>
-
-    let cervejas = ["Guiness", "Desperados", "Becks"]
-
-    //   function carregarDiv(){
-    const carregarDiv = () => {
-        const div = document.getElementById("meu amor")
-
-        const cervejasHtml = cervejas.map(item => `<h1>${item}</h1>`)
-
-        div.innerHTML = `${cervejasHtml.join("\n")}`
-
-    }
-
-    let botao = document.getElementById("botaoCarregar")
-
-    botao.addEventListener("click", carregarDiv)
-
-</script>
 
 </html>

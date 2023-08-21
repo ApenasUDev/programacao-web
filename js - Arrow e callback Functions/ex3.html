@@ -1,0 +1,70 @@
+<!-- Troque todos os botões dos exercícios anteriores e transforme-os em links, fazendo com que os links chamem os métodos adequados da mesma forma que os botões chamam. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div><a href="#" id="linkCarregar">Carregar cachaças...</a></div>
+    <div id="meuAmor"></div>
+
+    <script>
+        const transformarEmTableRow = item => `<tr><td>${item}</td></tr>`;
+        let cachaças = ["GERMANA", "WEBER HAUS 7 MADEIRAS", "FAMOSINHA"];
+
+        function carregarTabela(cachaçasArray) {
+            const div = document.getElementById("meuAmor");
+            const tabelaHTML = `
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Cachaças</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     ${cachaçasArray.map(transformarEmTableRow).join("")}
+                  </tbody>
+               </table>
+            `;
+            div.innerHTML = tabelaHTML;
+        }
+
+        const carregarDiv = cachaçasArray => {
+            const div = document.getElementById("meuAmor");
+            const cachaçasHtml = cachaçasArray.map(item => `<div style="color:white;background-color:black;font-size:25px">${item}</div>`);
+            div.innerHTML = `${cachaçasHtml.join("\n")}`;
+        }
+
+        const linkCarregar = document.getElementById("linkCarregar");
+        linkCarregar.addEventListener("click", (event) => {
+            event.preventDefault();
+            carregarTabela(cachaças);
+        });
+
+        const linkOrdenar = document.createElement("a");
+        linkOrdenar.href = "#";
+        linkOrdenar.textContent = "Mostrar cachaças ordenadas";
+        linkOrdenar.addEventListener("click", (event) => {
+            event.preventDefault();
+            cachaças.sort();
+            carregarTabela(cachaças);
+        });
+
+        const linkEmbaralhar = document.createElement("a");
+        linkEmbaralhar.href = "#";
+        linkEmbaralhar.textContent = "Embaralhar cachaças";
+        linkEmbaralhar.addEventListener("click", (event) => {
+            event.preventDefault();
+            cachaças = cachaças.sort(() => Math.random() - 0.5);
+            carregarTabela(cachaças);
+        });
+
+        document.body.appendChild(linkOrdenar);
+        document.body.appendChild(linkEmbaralhar);
+    </script>
+</body>
+
+</html>
