@@ -1,0 +1,51 @@
+<!-- Crie um botão mostrar cervejas ordenadas, que ordena o array cervejas. Pesquise como ordenar vetores em JS. Não impemente você mesmo nenhum método de ordenação. Depois de ordenar o array, faça a transformação em html e exiba no div "meu amor" (como tabela ou sequencia de divs) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="meu amor">
+        <button id="botaoCarregar">Carregando cervejas...</button>
+    </div>
+    <div>
+        <button id="ordenarCervejas">ordena cervejas</button>
+    </div>
+    <script>
+        let cervejas = ["Guinness", "Desperados", "Becks"];
+
+        function transformarEmTableRow(item) {
+            return `<tr><td>${item}</td></tr>`;
+        }
+        function ordenaCervejas() {
+            let listordenada = cervejas.sort();
+
+        }
+        function carregarTabela() {
+            let div = document.getElementById("meu amor");
+            let tabelaHTML = `
+                <table>
+                   <thead>
+                      <tr>
+                         <th>Cervejas</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                      ${cervejas.map(transformarEmTableRow).join("")}
+                   </tbody>
+                </table>
+             `;
+            div.innerHTML = tabelaHTML;
+        }
+
+        let botao = document.getElementById("botaoCarregar");
+        botao.addEventListener("click", carregarTabela);
+        let botaoordena = document.getElementById("ordenarCervejas");
+        botaoordena.addEventListener("click",ordenaCervejas);
+    </script>
+</body>
+
+</html>
