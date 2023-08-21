@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-
     <meta charset="UTF-8">
     <style>
         body {
@@ -30,8 +28,7 @@
             margin-top: 10px;
         }
 
-        th,
-        td {
+        th, td {
             padding: 10px;
             text-align: left;
         }
@@ -57,10 +54,7 @@
             background-color: #0056b3;
         }
     </style>
-
 </head>
-
-
 
 <body>
     <div id="container">
@@ -69,13 +63,8 @@
     </div>
 </body>
 
-
-
 <script>
-
-
-
-let cervejas = [
+    let cervejas = [
         {
             name: "Guinness",
             alcohol: "10%",
@@ -109,14 +98,14 @@ let cervejas = [
                     </tr>
                 </thead>
                 <tbody>
-                    ${gerarLinhasTabela(cervejas)}
+                    ${carregarDiv(cervejas)}
                 </tbody>
             </table>
         `;
         div.innerHTML = tabelaHTML;
     }
 
-    const gerarLinhasTabela = cs => {
+    const carregarDiv = cs => {
         return cs.map(item => `
             <tr>
                 <td>${item['name']}</td>
@@ -130,8 +119,6 @@ let cervejas = [
     let botao = document.getElementById("botaoCarregar");
 
     botao.addEventListener("click", carregarTabela);
-
-
 </script>
 
 </html>
