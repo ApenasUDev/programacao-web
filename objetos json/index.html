@@ -28,7 +28,8 @@
             margin-top: 10px;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
             text-align: left;
         }
@@ -87,14 +88,22 @@
 
     function carregarTabela() {
         let div = document.getElementById("cervejasDiv");
+        var output = [];
+        let i = 0;
+        for (property in cervejas[0]) {
+           
+            output.push(property);
+            // Uma propriedade de cada vez
+            // alert(property);
+        }
+        for (i in output.length){
+            i ++;
+        }
         let tabelaHTML = `
             <table>
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Álcool</th>
-                        <th>Estilo</th>
-                        <th>IBU</th>
+                        <td>${output[i]}</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -106,6 +115,13 @@
     }
 
     const carregarDiv = cs => {
+        var output = [];
+
+        for (property in cervejas[0]) {
+            output.push(property);
+            // Uma propriedade de cada vez
+            // alert(property);
+        }
         return cs.map(item => `
             <tr>
                 <td>${item['name']}</td>
