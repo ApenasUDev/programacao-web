@@ -71,6 +71,8 @@
             alcohol: "10%",
             style: "Stout",
             ibu: "40"
+
+
         },
         {
             name: "Desperados",
@@ -82,52 +84,45 @@
             name: "Becks",
             alcohol: "5%",
             style: "Pilsen",
-            ibu: "30"
+            ibu: "30",
         }
     ];
 
     function carregarTabela() {
         let div = document.getElementById("cervejasDiv");
-        var output = [];
-        let i = 0;
-        for (property in cervejas[0]) {
-           
+        let output = [];
+
+        // Preenchendo o array 'output' com as propriedades das cervejas
+        for (let property in cervejas[0]) {
             output.push(property);
-            // Uma propriedade de cada vez
-            // alert(property);
         }
-        for (i in output.length){
-            i ++;
-        }
+
         let tabelaHTML = `
-            <table>
-                <thead>
-                    <tr>
-                        <td>${output[i]}</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${carregarDiv(cervejas)}
-                </tbody>
-            </table>
-        `;
+        <table>
+            <thead>
+                <tr>
+                    <!-- Cabeçalho da tabela com as propriedades -->
+                    ${output.map(prop => `<th>${prop}</th>`).join('')}
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Preenchendo o corpo da tabela com os dados das cervejas -->
+                ${carregarDiv(cervejas)}
+            </tbody>
+        </table>
+    `;
         div.innerHTML = tabelaHTML;
     }
 
     const carregarDiv = cs => {
-        var output = [];
 
-        for (property in cervejas[0]) {
-            output.push(property);
-            // Uma propriedade de cada vez
-            // alert(property);
-        }
         return cs.map(item => `
             <tr>
                 <td>${item['name']}</td>
                 <td>${item['alcohol']}</td>
                 <td>${item['style']}</td>
                 <td>${item['ibu']}</td>
+                
             </tr>`
         ).join('');
     }
