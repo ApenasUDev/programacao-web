@@ -70,21 +70,24 @@
             name: "Guinness",
             alcohol: "10%",
             style: "Stout",
-            ibu: "40"
-
+            ibu: "40",
+            teste: "aprovado"
 
         },
         {
             name: "Desperados",
             alcohol: "6%",
             style: "Lager",
-            ibu: "25"
+            ibu: "25",
+            teste: "aprovado"
         },
         {
             name: "Becks",
             alcohol: "5%",
             style: "Pilsen",
             ibu: "30",
+            teste: "aprovado"
+
         }
     ];
 
@@ -98,34 +101,30 @@
         }
 
         let tabelaHTML = `
-        <table>
-            <thead>
-                <tr>
-                    <!-- Cabeçalho da tabela com as propriedades -->
-                    ${output.map(prop => `<th>${prop}</th>`).join('')}
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Preenchendo o corpo da tabela com os dados das cervejas -->
-                ${carregarDiv(cervejas)}
-            </tbody>
-        </table>
-    `;
+            <table>
+                <thead>
+                    <tr>
+                        <!-- Cabeçalho da tabela com as propriedades -->
+                        ${output.map(prop => `<th>${prop}</th>`).join('')}
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Preenchendo o corpo da tabela com os dados das cervejas -->
+                    ${carregarDiv(cervejas, output)}
+                </tbody>
+            </table>
+        `;
         div.innerHTML = tabelaHTML;
     }
 
-    const carregarDiv = cs => {
-
+    const carregarDiv = (cs, props) => {
         return cs.map(item => `
             <tr>
-                <td>${item['name']}</td>
-                <td>${item['alcohol']}</td>
-                <td>${item['style']}</td>
-                <td>${item['ibu']}</td>
-                
+                ${props.map(prop => `<td>${item[prop] || 'N/A'}</td>`).join('')}
             </tr>`
         ).join('');
     }
+
 
     let botao = document.getElementById("botaoCarregar");
 
