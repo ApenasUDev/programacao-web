@@ -1,3 +1,4 @@
+
 let cervejas = [];
 let bancos = [];
 
