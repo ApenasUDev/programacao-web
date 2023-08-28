@@ -12,25 +12,25 @@
 
 <body>
    <div>
-      <button id="botaoCarregar">Carregando usuários...</button>
+      <button id="botaoCarregar">Carregando cartão de crédito...</button>
    </div>
-   <div id="usuariosDiv"></div>
+   <div id="creditDiv"></div>
 
    <script src="tableGenerator.js"></script>
    <script>
 
       async function carregarUsuarios() {
          try {
-            let res = await fetch("https://random-data-api.com/api/v2/users?size=2");
-            let usuarios = await res.json();
+            let res = await fetch("https://random-data-api.com/api/v2/credit_cards?size=2");
+            let credit = await res.json();
 
             // Use a função montarTabela para exibir os usuários
-            const camposExibidos = ["first_name", "email", "gender"];
-            const nomesCamposExibidos = ["Nome", "E-mail", "Gênero"];
-            montarTabela(usuarios, "usuariosDiv", camposExibidos, nomesCamposExibidos);
+            const camposExibidos = ["id", "credit_card_number", "credit_card_expiry_date"];
+            const nomesCamposExibidos = ["id", "número do cartão", "data de expiração do cartão"];
+            montarTabela(credit, "creditDiv", camposExibidos, nomesCamposExibidos);
 
          } catch (err) {
-            document.getElementById("usuariosDiv").innerHTML = "Fudeu...";
+            document.getElementById("creditDiv").innerHTML = "Fudeu...";
          }
 
       }
