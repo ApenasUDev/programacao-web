@@ -1,46 +1,27 @@
+// script.js
 
-let cervejas = [];
-let bancos = [];
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("botaoCarregar").addEventListener("click", async () => {
+        try {
+            const response = await fetch("https://api.punkapi.com/v2/beers");
+            const data = await response.json();
+            const cervejasDiv = document.getElementById("cervejasDiv");
+            cervejasDiv.innerHTML = "";
+            cervejasDiv.appendChild(generateTable(data));
+        } catch (error) {
+            console.error("Erro ao carregar cervejas:", error);
+        }
+    });
 
-// cs é um array de cervejas
-const carregarDiv = cs => {
-    const div = document.getElementById("cervejasDiv");
-    const itensHtml = cs.map(({ name, alcohol, blg, brand, hop, ibu, id, malts, style, uid, yeast }) =>
-        `<div>${name} -- ${alcohol} -- ${blg} -- ${brand} -- ${hop} -- ${ibu} -- ${id} -- ${malts} -- ${style} -- ${uid} -- ${yeast}</div>`
-    );
-    div.innerHTML = itensHtml.join("\n");
-};
-
-const carregarDivBancos = cs => {
-    const div = document.getElementById("cervejasDiv");
-    const itensHtml = cs.map(({ account_number, bank_name, iban, id, routing_number, swift_bic, uid }) =>
-        `<div>${bank_name} -- ${account_number} -- ${iban} -- ${routing_number} -- ${swift_bic} -- ${uid} -- ${id}</div>`
-    );
-    div.innerHTML = itensHtml.join("\n");
-};
-
-async function carregarBancos() {
-    try {
-        let res = await fetch("https://random-data-api.com/api/v2/banks?size=3");
-        bancos = await res.json();
-        carregarDivBancos(bancos);
-    } catch (err) {
-        document.getElementById("cervejasDiv").innerHTML = "Fudeu...";
-    }
-}
-
-async function carregarCervejas() {
-    try {
-        let res = await fetch("https://random-data-api.com/api/v2/beers?size=3");
-        cervejas = await res.json();
-        carregarDiv(cervejas);
-    } catch (err) {
-        document.getElementById("cervejasDiv").innerHTML = "Fudeu...";
-    }
-}
-
-let botao = document.getElementById("botaoCarregar");
-let botao2 = document.getElementById("botaoCarregarBancos");
-
-botao.addEventListener("click", carregarCervejas);
-botao2.addEventListener("click", carregarBancos);
+    document.getElementById("botaoCarregarBancos").addEventListener("click", async () => {
+        try {
+            const response = await fetch("https://api.randomapi.com/v1/banks");
+            const data = await response.json();
+            const bancosDiv = document.getElementById("bancosDiv");
+            bancosDiv.innerHTML = "";
+            bancosDiv.appendChild(generateTable(data.results));
+        } catch (error) {
+            console.error("Erro ao carregar bancos:", error);
+        }
+    });
+});
