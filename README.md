@@ -17,3 +17,5 @@
 <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Fetch">receita 7</a>
 </br>
 <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%230">receita 8</a>
+</br>
+<a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%231">receita 9</a>
