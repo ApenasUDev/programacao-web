@@ -498,10 +498,16 @@ function TabelaBebidas() {
                 <h1>Minha tabela de bebidas</h1>
             );
         }
-        ReactDOM.render(
+function exibitable(){
+       ReactDOM.render(
             <TabelaBebidas />
             ,
             document.getElementById("app")) 
+    }
+        let botao = document.getElementById("buttoncachaca");
+        botao.addEventListener("click",exibitable );
+
 </script>
+
 </body>
 </html>
