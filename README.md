@@ -4,6 +4,8 @@
 
 # Tarefas
 
+## Html, css e JavaScript
+
 ### Tarefa 1 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/html%20basico">HTML BÁSICO</a>
 
 ### Tarefa 2 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/css%20basico">CSS BÁSICO</a>
@@ -15,6 +17,8 @@
 ### Tarefa 5 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/objetos%20json">OBJETOS JSON</a>
 
 ### Tarefa 6 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Fetch">FETCH</a>
+
+## React "puro"
 
 ### Tarefa 7 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%230">REACT #0</a>
 
