@@ -20,3 +20,5 @@
 
 ### Tarefa 8 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%231">REACT #1</a>
 
+### Tarefa 9 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%232">REACT #2</a>
+
