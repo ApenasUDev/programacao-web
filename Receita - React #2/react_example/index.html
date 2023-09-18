@@ -12,9 +12,10 @@
 
     <div id="app">
 
-
-
+        
     </div>
+    <br/>
+    <div id="app1"></div>
 
 
 
@@ -32,6 +33,7 @@
             render() {
                 return (
                     <div>
+                        <h1> { this.props.titulo } </h1>
                         <table id="tabela" border="1">
                             <thead>
                                 <tr><th>nome</th><th>idade</th></tr>
@@ -52,9 +54,9 @@
                 return (
 
                     <div>
+                        <h1>{ this.props.titulo }</h1>
 
                         <table id="tabela" border="1">
-
                             <thead>
 
                                 <tr><th>Nome</th><th>Marca</th></tr>
@@ -112,16 +114,19 @@
         }
 
 
+        
+                ReactDOM.render(
+                    <TabelaUsers titulo = "Tabela Usuários"/>,
+        
+                    document.getElementById("app1")
+                )
 
         ReactDOM.render(
 
-            <TabelaUsers />
-
+        <TabelaBebidas titulo="Tabela de Cana"/> 
             ,
 
             document.getElementById("app"))
-
-
 
     </script>
 
