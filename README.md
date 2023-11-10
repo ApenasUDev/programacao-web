@@ -14,7 +14,7 @@
 
 ### Tarefa 2 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/css%20basico">CSS BÁSICO</a>
 
-### Tarefa 3 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/js-basico">JAVASCRIPT BÁSICO E JAVASCRIPT BÁSICO 2`</a>`
+### Tarefa 3 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/js-basico">JAVASCRIPT BÁSICO E JAVASCRIPT BÁSICO 2</a>
 
 ### Tarefa 4 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/js%20-%20Arrow%20e%20callback%20Functions">JS - ARROW e CALLBACK FUNCTIONS</a>
 
