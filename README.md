@@ -35,5 +35,6 @@
 
 ### Tarefa 10 - <a href = "https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%233">REACT #3</a>
 
-# Tarefas da Unidade 2
+# Tarefas da Unidade 3
 ## React com NextJS
+### Tarefa 11 - <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita-Next-01">NEXT #1</a>
