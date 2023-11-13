@@ -38,3 +38,4 @@
 # Tarefas da Unidade 3
 ## React com NextJS
 ### Tarefa 11 - <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita-Next-01">NEXT #1</a>
+### Tarefa 12 - <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita-Next-2">NEXT #2</a>
