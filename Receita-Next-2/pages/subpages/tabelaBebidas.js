@@ -1,5 +1,5 @@
 import React from 'react';
-function bebidas() {
+function bebidas(props) {
     return (
         <div>
             <table  border="1">
@@ -11,12 +11,8 @@ function bebidas() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Cachaça Companheira Castanheira 670ml</td>
-                        <td>40%</td>
-                    </tr>
-                    <tr>
-                        <td>Cachaça Marc Amburana 700ml</td>
-                        <td>39%</td>
+                        <td>{props.nome}</td>
+                        <td>{props.alcool}</td>
                     </tr>
                 </tbody>
             </table>
