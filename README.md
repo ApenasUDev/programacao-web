@@ -6,7 +6,7 @@
 
 ## Matricula: 20210083739
 
-# Tarefas da Unidade 1
+
 
 ## Html, css e JavaScript
 
@@ -24,7 +24,7 @@
 
 ### Tarefa extra unidade 1 - <a href = "https://github.com/ApenasUDev/programacao-web/tree/main/promessas">PROMESSAS</a>
 
-# Tarefas da Unidade 2
+
 ## React "puro"
 
 ### Tarefa 7 -  <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%230">REACT #0</a>
@@ -35,7 +35,3 @@
 
 ### Tarefa 10 - <a href = "https://github.com/ApenasUDev/programacao-web/tree/main/Receita%20-%20React%20%233">REACT #3</a>
 
-# Tarefas da Unidade 3
-## React com NextJS
-### Tarefa 11 - <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita-Next-01">NEXT #1</a>
-### Tarefa 12 - <a href="https://github.com/ApenasUDev/programacao-web/tree/main/Receita-Next-2">NEXT #2</a>
